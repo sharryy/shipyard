@@ -26,7 +26,7 @@ yarn-error.log
 
 # Misc
 phpunit.xml
-phpstan.neon
+phpstan.neon.dist
 psalm.xml
 testbench.yaml
 /docs
