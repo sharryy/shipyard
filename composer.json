@@ -1,11 +1,12 @@
 {
-    "name": "sharryy/shipyard",
+    "name": "sharryy/sandbox",
     "description": "A package to effortlessly interact with Docker Engine API",
     "keywords": [
-        "sharryy",
-        "shipyard"
+        "sandbox",
+        "docker",
+        "container"
     ],
-    "homepage": "https://github.com/sharryy/shipyard",
+    "homepage": "https://github.com/sharryy/sandbox",
     "license": "MIT",
     "authors": [
         {
@@ -35,7 +36,7 @@
     },
     "scripts": {
         "test": "vendor/bin/pest",
-            "test-coverage": "vendor/bin/pest --coverage",
+        "test-coverage": "vendor/bin/pest --coverage",
         "format": "vendor/bin/pint"
     },
     "config": {
