@@ -7,6 +7,7 @@ use GuzzleHttp\Client;
 class Docker
 {
     private Client $client;
+
     private ConnectionOptions $options;
 
     public function __construct(?ConnectionOptions $options = null)
@@ -28,7 +29,7 @@ class Docker
                 'HostConfig' => [
                     'AutoRemove' => false, // Don't auto-remove, we'll do it manually after getting logs
                     'Binds' => [
-                        $tempFile.':/code.php:ro'
+                        $tempFile.':/code.php:ro',
                     ],
                     'NetworkMode' => 'none',
                     'Memory' => 128 * 1024 * 1024, // 128MB

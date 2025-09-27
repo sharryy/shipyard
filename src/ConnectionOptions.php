@@ -2,15 +2,12 @@
 
 namespace Sharryy\Docker;
 
-use RuntimeException;
 use GuzzleHttp\RequestOptions;
+use RuntimeException;
 
 readonly class ConnectionOptions
 {
-    private function __construct(private string $baseUri = 'http://localhost', private array $curlOptions = [])
-    {
-
-    }
+    private function __construct(private string $baseUri = 'http://localhost', private array $curlOptions = []) {}
 
     public static function fromSocket(string $socket = '/var/run/docker.sock'): self
     {
@@ -19,7 +16,7 @@ readonly class ConnectionOptions
         }
 
         return new self('http://localhost', [
-            CURLOPT_UNIX_SOCKET_PATH => $socket
+            CURLOPT_UNIX_SOCKET_PATH => $socket,
         ]);
     }
 

@@ -2,11 +2,11 @@
 
 namespace Sharryy\Docker\Tests;
 
-use Sharryy\Docker\Docker;
 use Sharryy\Docker\ConnectionOptions;
+use Sharryy\Docker\Docker;
 
 test('can run simple PHP code in container', function () {
-    $docker = new Docker();
+    $docker = new Docker;
 
     $code = '<?php echo "Hello from Docker!";';
 
@@ -28,7 +28,7 @@ test('can use custom connection options', function () {
 });
 
 test('can run PHP code with calculations', function () {
-    $docker = new Docker();
+    $docker = new Docker;
 
     $code = '<?php echo 2 + 2;';
 
@@ -38,7 +38,7 @@ test('can run PHP code with calculations', function () {
 });
 
 test('can capture error output', function () {
-    $docker = new Docker();
+    $docker = new Docker;
 
     $code = '<?php trigger_error("This is a test error", E_USER_WARNING); echo "Done";';
 
