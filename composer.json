@@ -16,7 +16,9 @@
         }
     ],
     "require": {
-        "php": "^8.4"
+        "php": "^8.4",
+        "guzzlehttp/guzzle": "^7.10",
+        "ext-curl": "*"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
